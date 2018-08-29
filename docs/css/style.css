@@ -16,12 +16,13 @@ a{
     text-decoration: none;
 }
 /* 3-1 Home ------------------*/
-.home .nav a:link , .home .nav a:visited{
+/* glo-nav common */
+.nav a:link , .nav a:visited{
     color: #FFFFFF;
     text-decoration: none;
 }
 
-.home .nav a:hover, .home .nav a:active{
+.nav a:hover, .nav a:active{
     color: #E2E2E2;
     text-decoration: none;
 }
@@ -41,63 +42,12 @@ a{
     text-decoration: none;
 }
 /* 3-2 Hajimeni ------------------*/
-.hajimeni .nav a:link, .hajimeni .nav a:visited{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-..hajimeni nav a:hover, .hajimeni .nav a:active{
-    color: #E2E2E2;
-    text-decoration: none;
-}
-
-.hajimeni a:hover, .hajimeni a:active{
-    color: #E2E2E2;
-    text-decoration: none;
-}
 
 /* 3-3 factory ------------------*/
-.factory .nav a:link , .factory .nav a:visited{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.factory .nav a:hover, .factory .nav a:active{
-    color: #E2E2E2;
-    text-decoration: none;
-}
 
 /* 3-4 products ------------------*/
-.products .nav a:link , .products  .nav a:visited{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.products .nav a:hover, .products .nav a:active{
-    color: #E2E2E2;
-    text-decoration: none;
-}
-
-.products a:hover, .products a:active{
-    color: #E2E2E2;
-    text-decoration: none;
-}
 
 /* 3-5 special ------------------*/
-.special .nav a:link , .special .nav a:visited{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.special .nav a:hover, .special .nav a:active{
-    color: #E2E2E2;
-    text-decoration: none;
-}
-
-.special a:hover, .special a:active{
-    color: #E2E2E2;
-    text-decoration: none;
-}
 
 /* 3-6 company ------------------*/
 .company .nav a:link , .company .nav a:visited{
@@ -110,47 +60,33 @@ a{
     text-decoration: none;
 }
 
-
 .company a:hover, .company a:active{
     color: #E2E2E2;
     text-decoration: none;
 }
 
 /* 3-7 seisansha ------------------*/
-.seisansha .nav a:link , .seisansha  .nav a:visited{
-    color: #FFFFFF;
-    text-decoration: none;
-}
-
-.seisansha .nav a:hover, .seisansha .nav a:active{
-    color: #E2E2E2;
-    text-decoration: none;
-}
-
-.seisansha a:hover, .seisansha a:active{
-    color: #E2E2E2;
-    text-decoration: none;
-}
 
 /* 3-8 news ------------------*/
-.nav a:link , .nav a:visited{
+.news .nav a:link , .news .nav a:visited{
     color: #505050;
     text-decoration: none;
 }
 
-.nav a:hover, .nav a:active{
+.news nav a:hover, .news .nav a:active{
     color: #8C8C8C;
     text-decoration: none;
 }
-a:hover, a:active{
+
+#newblo a:link, #newblo a:visited{
+    color:#505050;
+    text-decoration: none;
+}
+#newblo a:hover, a:active{
     color: #E2E2E2;
     text-decoration: none;
 }
 /* 3-9 blog ------------------*/
-.blog #newblo a:link, .blog #newblo a:visited{
-    color:#505050;
-    text-decoration: none;
-}
 /* 4 header ------------------------ */
 /* 4-0 header common ------------------ */
 /* slider */
@@ -160,50 +96,46 @@ a:hover, a:active{
 }
 
 .slider{
-    width: 100vw;
+    width: 100%;
     height: 100vh;
-    position: relative;
-    overflow: hidden;
-    opacity: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
-.slick-list{
-    height: 900px !important;
 
-}
 .slick-track{
     height: 100vh;
-    z-index: 2;
 }
-.slick-active{
-    /* height: 900px !important; */
-}
+
 .slide1{
-    background: url(../img/FV1.jpg) center center no-repeat;
+    background: url(../img/FV2.jpg) center center no-repeat;
     background-size: cover;
     height: 100vh;
-    /* height: 900px !important; */
 }
 .slide2{
     background: url(../img/FV2.jpg) center center no-repeat;
     background-size: cover;
     height: 100vh;
-    /* height: 900px !important; */
 }
 .slide3{
     background: url(../img/FV3.jpg) center center no-repeat;
     background-size: cover;
     height: 100vh;
-
-    /* height: 900px !important; */
 }
-
 .slide4{
     background: url(../img/FV4.jpg) center center no-repeat;
     background-size: cover;
     height: 100vh;
-    /* height: 900px !important; */
 }
 
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 /* global navigation */
 header nav ul{
     justify-content: space-between;
@@ -238,11 +170,11 @@ header nav{
 /* 4-1 Home ------------------*/
 .home header{
     width: 100%;
-    height: 100%;
+    height: 100vh;
     position: relative;
-    /* background: url(../img/FV2.jpg) center center no-repeat;
-    background-size: cover; */
-    /* opacity: 0;
+    background: url(../img/FV2.jpg) center center no-repeat;
+    background-size: cover;
+    /* opacity: 0; */
     animation-name: fade-in;
     animation-duration: .8s;
     animation-delay: .5s;
@@ -252,9 +184,9 @@ header nav{
     /* display: flex; */
     /* justify-content: center; 左右の中央配置 */
     /* align-items: center; 上下の中央配置 */
-    /* overflow: hidden;
+    overflow: hidden;
     position: relative;
-    z-index: 2; */
+    z-index: 2;
 
 }
 .home header .down-arrow{
@@ -297,15 +229,17 @@ header nav{
     position: relative;
     width: 100%;
     height: 80vh;
-    position: relative;
     background: url(../img/tokubetsu-main.jpg) center center no-repeat;
     background-size: cover;
 }
 
 .special #song{
-    position: absolute;
-    width: 833px;
+    width: 1000px;
     height: 550px;
+    margin: auto;
+    display: flex;
+    padding-top: 150px;
+    padding-bottom: 50px;
 }
 .special header #song p{
     font-size: 17px;
@@ -318,23 +252,11 @@ header nav{
     letter-spacing: 0.25rem;
 }
 .special header #song #para3{
-    position: absolute;
-    left: 306px;
-    top: 145px;
-    margin: 0 45px;
 }
 .special header #song #para2{
-    position: absolute;
-    left: 625px;
-    top: 145px;
-    margin: 0 45px;
-
+    margin: 0 50px;
 }
 .special header #song #para1{
-    position: absolute;
-    left: 1014px;
-    top: 145px;
-    margin: 0 45px;
 }
 
 
@@ -441,27 +363,40 @@ header nav{
 }
 
 .home #menu section{
-    background-color: #000;
+    position: relative;
 }
 
-.home #menu section:hover{
-
+.home #menu .menu-bg:hover{
     opacity: 0.5;
-    transition: all 0.5s ease-out;
+    /* position: absolute;
+    left: 0;
+    top: 0;
+    height: 430px;
+    width: 100%;
+    background: rgba(0,0,0,0.5); */
     }
 
 
 .home #menu .hajimeni {
     position: relative;
-    background: url(../img/menu-hajimeni.jpg) top center no-repeat;
+    /* background: url(../img/menu-hajimeni.jpg) top center no-repeat; */
     background-size: cover;
-    background-color: #000;
+    /* background-color: #000; */
     opacity: 1;
     width: 100%;
     height: 424px;
     margin-bottom: 55px;
 }
 
+.menu-bg{
+    width: 100%;
+    height: 424px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-size: cover;
+    opacity: 1;
+}
 .home #menu .hajimeni h3{
     position: absolute;
     width: 121px;
@@ -470,6 +405,10 @@ header nav{
     top: calc(50% - 80px);
     background-color: #FFFFFF;
     padding-left: 39px;
+}
+
+.hajimeni .menu-bg{
+    background: url(../img/menu-hajimeni.jpg) top center no-repeat;
 }
 
 .home #menu .factory{
@@ -508,7 +447,6 @@ header nav{
     top: calc(50% - 80px);
     background-color: #FFFFFF;
     padding-left: 39px;
-
 }
 
 .home #menu .special{
@@ -527,7 +465,6 @@ header nav{
     top: calc(50% - 80px);
     background-color: #FFFFFF;
     padding-left: 27px;
-
 }
 
 /* 5-2 Hajimeni ------------------*/
