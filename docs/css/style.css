@@ -2,44 +2,64 @@
 
 /* 2 Font ---------------------- */
 body{
-    font-size: 15px;
-
     font-family: 'Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','Yu Mincho Light','YuMincho','Yu Mincho','游明朝体','ヒラギノ明朝 ProN','Hiragino Mincho ProN','Iowan Old Style',sans-serif;
 
     line-height: 1.6;
     font-weight: normal;
     color: #505050;
+    animation: fade-in 2s ease-in-out 0s 1 normal;
 }
 
 /* 3 Link Color ------------------*/
 a{
+    color: #505050;
     text-decoration: none;
 }
 /* 3-1 Home ------------------*/
+
 /* glo-nav common */
 .nav a:link , .nav a:visited{
     color: #FFFFFF;
     text-decoration: none;
+    transition: all 0.3s ease;
 }
 
 .nav a:hover, .nav a:active{
-    color: #E2E2E2;
+    color: #BCBCBC;
     text-decoration: none;
 }
 
-.home #newinfo a:link , a:visited{
-    color: #505050;
-    text-decoration: none;
+.home #newinfo .news1:hover, .home #newinfo .news1:active {
+    color: #BCBCBC;
+    transition: all 0.3s ease;
 }
 
-.home #menu a:link , a:visited{
-    color: #505050;
-    text-decoration: none;
+.home #newinfo .news2:hover, .home #newinfo .news2:active {
+    color: #BCBCBC;
+    transition: all 0.3s ease;
 }
 
-.home a:hover, .home a:active{
-    color: #E2E2E2;
+.home #newinfo ul .oshirase:hover, .home #newinfo ul .oshirase:active{
+    color: #FFFFFF;
+    background-color: #BCBCBC;
+    transition: all 0.3s ease;
+}
+.home #newinfo ul .burogu:hover, .home #newinfo ul .burogu:active{
+    color: #FFFFFF;
+    background-color: #BCBCBC;
+    transition: all 0.3s ease;
+}
+
+.home #newinfo ul a:hover, .home #newinfo ul a:active{
+    color: #BCBCBC;
     text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.home #newinfo .label:hover{
+    color: #BCBCBC;
+    text-decoration: none;
+    transition: all 0.3s ease;
 }
 /* 3-2 Hajimeni ------------------*/
 
@@ -61,7 +81,7 @@ a{
 }
 
 .company a:hover, .company a:active{
-    color: #E2E2E2;
+    color: #BCBCBC;
     text-decoration: none;
 }
 
@@ -83,7 +103,7 @@ a{
     text-decoration: none;
 }
 #newblo a:hover, a:active{
-    color: #E2E2E2;
+    background-color: #BCBCBC;
     text-decoration: none;
 }
 /* 3-9 blog ------------------*/
@@ -94,7 +114,6 @@ a{
     font-family: 'slick';
     src: url('../fonts/slick.woff') format('woff');
 }
-
 .slider{
     width: 100%;
     height: 100vh;
@@ -102,93 +121,70 @@ a{
     left: 0;
     top: 0;
 }
-
 .slick-track{
     height: 100vh;
 }
-
 .slide1{
-    background: url(../img/FV2.jpg) center center no-repeat;
+    background: url(../img/FV1.jpg) center center no-repeat;
     background-size: cover;
-    height: 100vh;
 }
 .slide2{
     background: url(../img/FV2.jpg) center center no-repeat;
     background-size: cover;
-    height: 100vh;
 }
 .slide3{
     background: url(../img/FV3.jpg) center center no-repeat;
     background-size: cover;
-    height: 100vh;
-}
-.slide4{
-    background: url(../img/FV4.jpg) center center no-repeat;
-    background-size: cover;
-    height: 100vh;
 }
 
-@keyframes fade-in {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
 /* global navigation */
+header .glonav{
+    width: 100%;
+    height: 67px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    /* background-color: rgba(188, 188, 188, 0.4); */
+    z-index: 2;
+}
 header nav ul{
     justify-content: space-between;
     letter-spacing: 0.3rem;
     display: flex;
-    width: 690px;
+    width: 750px;
     height:16px;
 }
 /* Takalogo */
 header h1{
     position: absolute;
-    top: 21px;
+    top: 15px;
     left: 46px;
-    width: 124px;
-    height: 46px;
+    width: 100px;
+    height: 37px;
 }
 
 header h1 img{
-    width: 124px;
+    width: 100px;
     height: auto;
 }
 
 header nav{
-    width: 690px;
+    width: 750px;
     height: 16px;
     position: absolute;
     right: 48px;
-    top: 25px;
+    top: 20px;
 }
-
 
 /* 4-1 Home ------------------*/
 .home header{
     width: 100%;
     height: 100vh;
     position: relative;
-    background: url(../img/FV2.jpg) center center no-repeat;
+    background: url(../img/FV4.jpg) center center no-repeat;
     background-size: cover;
-    /* opacity: 0; */
-    animation-name: fade-in;
-    animation-duration: .8s;
-    animation-delay: .5s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards; */
-    /* display: flex; */
-    /* justify-content: center; 左右の中央配置 */
-    /* align-items: center; 上下の中央配置 */
-    overflow: hidden;
-    position: relative;
-    z-index: 2;
-
 }
+
 .home header .down-arrow{
     position: absolute;
     left: calc(50% - 18px);
@@ -251,14 +247,9 @@ header nav{
     line-height: 4;
     letter-spacing: 0.25rem;
 }
-.special header #song #para3{
-}
 .special header #song #para2{
     margin: 0 50px;
 }
-.special header #song #para1{
-}
-
 
 /* 4-6 company ------------------*/
 .company header{
@@ -283,7 +274,12 @@ header nav{
     height: 200px;
     position: relative;
 }
-
+/* 4-9 blog ------------------*/
+.blog header{
+    width: 100%;
+    height: 200px;
+    position: relative;
+}
 
 /* 5 section ------------------------ */
 /* 5-0 Common ------------------------ */
@@ -308,15 +304,32 @@ header nav{
     justify-content: space-between;
 }
 
+.home .news1 a{
+    position: absolute;
+    width: 670px;
+    height: 25px;
+    top: 15px;
+    left: 0;
+}
+
+.home .news2 a{
+    position: absolute;
+    width: 670px;
+    height: 25px;
+    bottom: 15px;
+    left: 0;
+}
+
 .home #newinfo dl dt{
     width: 120px;
 }
 
 .home #newinfo .label{
-    width: 80px;
-    height: 18px;
+    padding: 3px 1px 0 0;
+    width: 70px;
+    height: 19px;
     color: #FFFFFF;
-    font-size: 12px;
+    font-size: 13px;
     background-color: #ACACAC;
     text-align: center;
 }
@@ -327,12 +340,14 @@ header nav{
 }
 
 .home .news1{
+    position: relative;
     border-top: 1px #505050 solid;
     padding-top: 15px;
     padding-bottom: 24px;
 }
 
 .home .news2{
+    position: relative;
     border-bottom: 1px #505050 solid;
     padding-bottom: 15px;
 }
@@ -354,41 +369,56 @@ header nav{
     width: 146px;
     height: 30px;
 }
+.home #newinfo ul .oshirase{
+    position: relative;
+}
+.home #newinfo ul .oshirase a{
+    width: 148px;
+    height: 27px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.home #newinfo ul .burogu{
+    position: relative;
+}
+.home #newinfo ul .burogu a{
+    width: 148px;
+    height: 27px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 /* main menu --------------------- */
 .home #menu{
-    font-size: 16px;
-    letter-spacing: 0.4rem;
+    font-size: 20px;
+    letter-spacing: 0.5rem;
     line-height: 150px;
 }
 
+.home #menu .menu-bg:hover{
+    opacity: 0.6;
+}
 .home #menu section{
     position: relative;
+    background-color: #000;
 }
-
-.home #menu .menu-bg:hover{
-    opacity: 0.5;
-    /* position: absolute;
-    left: 0;
-    top: 0;
-    height: 430px;
-    width: 100%;
-    background: rgba(0,0,0,0.5); */
-    }
-
-
+/* menu hajimeni -------------- */
 .home #menu .hajimeni {
     position: relative;
-    /* background: url(../img/menu-hajimeni.jpg) top center no-repeat; */
-    background-size: cover;
-    /* background-color: #000; */
     opacity: 1;
     width: 100%;
     height: 424px;
     margin-bottom: 55px;
 }
+.home #menu .hajimeni .menu-bg{
+    background: url(../img/menu-hajimeni.jpg) top center no-repeat;
+    background-size: cover;
+}
 
-.menu-bg{
+.home #menu .menu-bg{
     width: 100%;
     height: 424px;
     position: absolute;
@@ -396,75 +426,86 @@ header nav{
     top: 0;
     background-size: cover;
     opacity: 1;
+    transition: all 1s ease;
 }
 .home #menu .hajimeni h3{
     position: absolute;
-    width: 121px;
+    width: 160px;
     height: 160px;
     left: calc(50% - 80px);
     top: calc(50% - 80px);
     background-color: #FFFFFF;
-    padding-left: 39px;
+    text-indent: 1.7rem;
 }
 
-.hajimeni .menu-bg{
-    background: url(../img/menu-hajimeni.jpg) top center no-repeat;
-}
-
+/* menu factory -------------- */
 .home #menu .factory{
     position: relative;
+    width: 100%;
+    height: 424px;
+    margin-bottom: 55px;
+}
+
+.home #menu .factory .menu-bg{
     background: url(../img/menu-seisan.jpg) center center no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 424px;
-    margin-bottom: 55px;
 }
-
 .home #menu .factory h3{
     position: absolute;
-    width: 121px;
+    width: 160px;
     height: 160px;
     left: calc(50% - 80px);
     top: calc(50% - 80px);
     background-color: #FFFFFF;
-    padding-left: 39px;
+    text-indent: 1.7rem;
 }
 
+/* menu products -------------- */
 .home #menu .products{
     position: relative;
-    background: url(../img/menu-shohin.jpg) center center no-repeat;
-    background-size: cover;
+    /* background: url(../img/menu-shohin.jpg) center center no-repeat;
+    background-size: cover; */
     width: 100%;
     height: 424px;
     margin-bottom: 55px;
 }
 
+.home #menu .products .menu-bg{
+    background: url(../img/menu-shohin.jpg) center center no-repeat;
+    background-size: cover;
+}
 .home #menu .products h3{
     position: absolute;
-    width: 121px;
+    width: 160px;
     height: 160px;
     left: calc(50% - 80px);
     top: calc(50% - 80px);
     background-color: #FFFFFF;
-    padding-left: 39px;
+    text-indent: 1.8rem;
 }
 
+/* menu special -------------- */
 .home #menu .special{
     position: relative;
-    background: url(../img/menu-tokubetsu.jpg) center center no-repeat;
-    background-size: cover;
+    /* background: url(../img/menu-tokubetsu.jpg) center center no-repeat;
+    background-size: cover; */
     width: 100%;
     height: 424px;
+}
+
+.home #menu .special .menu-bg{
+    background: url(../img/menu-tokubetsu.jpg) center center no-repeat;
+    background-size: cover;
 }
 
 .home #menu .special h3{
     position: absolute;
-    width: 133px;
+    width: 160px;
     height: 160px;
     left: calc(50% - 80px);
     top: calc(50% - 80px);
     background-color: #FFFFFF;
-    padding-left: 27px;
+    text-indent: 0.9rem;
 }
 
 /* 5-2 Hajimeni ------------------*/
@@ -475,12 +516,33 @@ header nav{
     text-align: center;
     margin-top: 70px;
 }
+.fixed{
+    position: fixed;
+}
+.fade-in{
+    animation-name: fade-in;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 .hajimeni #main p{
-    font-size: 15px;
+    font-size: 18px;
     letter-spacing: 0.42rem;
     text-align: center;
-    line-height: 55px;
+    line-height: 65px;
     margin: 70px auto;
+    opacity: 0;
+    animation-delay: 1s;
 }
 
 /* 5-3 Factory ------------------*/
@@ -489,29 +551,31 @@ header nav{
     margin-top: 70px;
 }
 .factory #seisan h2{
-    font-size: 24px;
+    font-size: 26px;
     letter-spacing: 0.4rem;
     text-align: center;
     margin: 70px auto;
 }
 
 .factory #seisan h3{
-    font-size: 19px;
+    font-size: 22px;
     letter-spacing: 0.32rem;
     text-align: center;
 }
 
 .factory #seisan p{
-    font-size: 15px;
+    font-size: 17px;
     letter-spacing: 0.26rem;
-    line-height: 26px;
+    line-height: 38px;
     text-align: center;
-    padding: 40px 0 80px;
+    padding: 40px 0 70px;
 }
 .factory #seisan .seisan1{
     margin-top: 100px;
     width: 100%;
     height: 600px;
+    opacity: 0;
+    animation-delay: 1s;
 }
 
 .factory #seisan .pic1{
@@ -525,6 +589,7 @@ header nav{
     margin-top: 150px;
     width: 100%;
     height: 600px;
+    opacity: 0;
 }
 
 .factory #seisan .pic2{
@@ -537,6 +602,7 @@ header nav{
     margin-top: 150px;
     width: 100%;
     height: 600px;
+    opacity: 0;
 }
 
 .factory #seisan .pic3{
@@ -550,6 +616,7 @@ header nav{
     margin-top: 150px;
     width: 100%;
     height: 600px;
+    opacity: 0;
 }
 
 .factory #seisan .pic4{
@@ -563,6 +630,7 @@ header nav{
     margin-top: 150px;
     width: 100%;
     height: 600px;
+    opacity: 0;
 }
 
 .factory #seisan .pic5{
@@ -576,6 +644,7 @@ header nav{
     margin-top: 150px;
     width: 100%;
     height: 600px;
+    opacity: 0;
 }
 .factory #seisan .pic6{
     width: 100%;
@@ -601,30 +670,24 @@ header nav{
 }
 
 .products #list h2{
-    font-size: 24px;
+    font-size: 26px;
     letter-spacing: 0.4rem;
     text-align: center;
     margin-bottom: 200px;
 }
 
-.products #list #sub-copy{
-    font-size: 16px;
-    letter-spacing: 0.2rem;
-    text-align: center;
-}
 .products #list .text{
     width: 512px;
     height: 142px;
 }
 
 .products #list h3{
-    font-size: 19px;
+    font-size: 22px;
     letter-spacing: 0.1rem;
     text-align: left;
 }
-
 .products #list p{
-    font-size: 14px;
+    font-size: 15px;
     letter-spacing: 0.1rem;
     text-align: left;
 }
@@ -633,53 +696,45 @@ header nav{
 .products #list #uonuma{
     width: 775px;
     height: 265px;
+    display: flex;
+    justify-content: space-between;
+    margin: 115px auto;
+    opacity: 0;
 }
 .products #list #niigata{
     width: 775px;
     height: 265px;
+    display: flex;
+    justify-content: space-between;
+    margin: 115px auto;
+    opacity: 0;
 }
 .products #list #niigata-white{
     width: 775px;
     height: 265px;
+    display: flex;
+    justify-content: space-between;
+    margin: 115px auto;
+    opacity: 0;
 }
 .products #list #mochi{
     width: 775px;
     height: 265px;
+    display: flex;
+    justify-content: space-between;
+    margin: 115px auto;
+    opacity: 0;
 }
 .products #list #shinnosuke{
     width: 775px;
     height: 265px;
-}
-.products #list .text h3{
-    margin: 23px 0 30px 0;
-}
-/* positioning and space ------------------*/
-
-.products #list #uonuma{
-    display: flex;
-    justify-content: space-between;
-    margin: 115px auto;
-}
-
-.products #list #niigata{
-    display: flex;
-    justify-content: space-between;
-    margin: 115px auto;
-}
-.products #list #niigata-white{
-    display: flex;
-    justify-content: space-between;
-    margin: 115px auto;
-}
-.products #list #mochi{
-    display: flex;
-    justify-content: space-between;
-    margin: 115px auto;
-}
-.products #list #shinnosuke{
     display: flex;
     justify-content: space-between;
     margin: 115px auto 0;
+    opacity: 0;
+}
+.products #list .text h3{
+    margin: 23px 0 30px 0;
 }
 
 /* 5-5 Special ------------------*/
@@ -687,17 +742,18 @@ header nav{
     margin: 70px auto;
 }
 .special #main h2{
-    font-size: 24px;
+    font-size: 26px;
     letter-spacing: 0.4rem;
     text-align: center;
 }
 
 .special #main p{
-    font-size: 15px;
+    font-size: 17px;
     letter-spacing: 0.2rem;
     line-height: 2.5;
     text-align: center;
     margin: 95px auto 150px;
+    opacity: 0;
 }
 
 .special #main .seisansha{
@@ -705,17 +761,18 @@ header nav{
     height: 277px;
     background: url(../img/special1.jpg) top center no-repeat;
     background-size: cover;
+    opacity: 0;
 }
 
 .special #rice h3{
-    font-size: 18px;
+    font-size: 22px;
     letter-spacing: 0.1rem;
     text-align: left;
     margin: 23px 0 30px 0;
 }
 
 .special #rice p{
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 0.1rem;
     text-align: left;
 }
@@ -725,6 +782,7 @@ header nav{
     width: 775px;
     height: 265px;
     margin: 50px auto;
+    opacity: 0;
 }
 
 .special #rice #kome img{
@@ -748,16 +806,16 @@ header nav{
     background-size: cover;
 }
 #company h2{
-    font-size: 24px;
+    font-size: 26px;
     letter-spacing: 0.4rem;
     text-align: center;
     margin: 70px auto;
 }
 #company .annai{
-    width: 633px;
+    width: 660px;
     height: 532px;
     margin: 150px auto;
-    font-size: 16px;
+    font-size: 17px;
     letter-spacing: 0.42rem;
     line-height: 1;
 }
@@ -813,7 +871,7 @@ header nav{
 }
 /* history ---------------------- */
 #history h3{
-    font-size: 24px;
+    font-size: 26px;
     letter-spacing: 0.7rem;
     text-align: center;
     margin-top: 100px;
@@ -822,7 +880,7 @@ header nav{
     width: 658px;
     height: 536px;
     margin: 96px auto;
-    font-size: 16px;
+    font-size: 17px;
     letter-spacing: 0.2rem;
 }
 
@@ -888,7 +946,7 @@ header nav{
     height: 473px;
 }
 #access h3{
-    font-size: 24px;
+    font-size: 26px;
     letter-spacing: 0.7rem;
     text-align: center;
     margin-bottom: 50px;
@@ -912,27 +970,24 @@ header nav{
     font-size: 24px;
     letter-spacing: 0.7rem;
 }
-.seisansha #main .text1{
-    font-size: 15px;
+
+.seisansha #main p{
+    font-size: 18px;
     letter-spacing: 0.42rem;
     text-align: center;
-    line-height: 55px;
+    line-height: 65px;
+    opacity: 0;
+    animation-delay: 1s;
+}
+
+.seisansha #main .text1{
     margin: 150px auto 0;
+    opacity: 0;
 }
 
 .seisansha #main .text2{
-    font-size: 15px;
-    letter-spacing: 0.42rem;
-    text-align: center;
-    line-height: 55px;
     margin: 40px auto;
-}
-
-.seisansha #main .text3{
-    font-size: 16px;
-    letter-spacing: 0.42rem;
-    text-align: center;
-    line-height: 55px;
+    opacity: 0;
 }
 
 /* 5-8 news ------------------*/
@@ -942,7 +997,7 @@ header nav{
     margin: 0 auto;
 }
 #newblo h2{
-    font-size: 24px;
+    font-size: 26px;
     letter-spacing: 0.38rem;
     text-align: center;
     margin: 0 auto 90px;
@@ -961,17 +1016,17 @@ header nav{
 }
 
 #newblo dl .title{
-    font-size: 18px;
+    font-size: 19px;
     letter-spacing: 0.1rem;
     margin-bottom: 40px;
 }
 
 #newblo dl .text{
-    font-size: 14px;
+    font-size: 15px;
 }
 
 #newblo p{
-    font-size: 13px;
+    font-size: 15px;
     letter-spacing: 0.1rem;
 }
 
@@ -986,7 +1041,7 @@ header nav{
 /* footer ------------------------ */
 footer{
     width: 100%;
-    padding:224px 0;
+    margin:250px 0;
     text-align: center;
 }
 

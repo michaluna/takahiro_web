@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Takahiro Home</title>
     <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="css/slick.css">
     <link rel="stylesheet" href="./css/slick-theme.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -19,6 +20,7 @@
             <div class="slide4"></div>
         </div>
 
+    <div class="glonav">
         <!-- white logo -->
         <h1><a href="./index.html"><img src="./img/logo-white.png" alt="Takalogo"></a></h1>
 
@@ -34,6 +36,7 @@
                 </ul>
             </div>
         </nav>
+    </div>
 
         <!-- Go Down Arrow -->
         <div class="down-arrow">
@@ -45,20 +48,26 @@
     <section id="newinfo">
         <h2>最新情報</h2>
 
-        <dl class="news1">
-            <dt><a href="./news/index.html">2018年9月2日</a></dt>
+    <div class="news1">
+        <dl>
+            <dt>2018年9月2日</dt>
             <dd class="label">お知らせ</dd>
             <dd class="title">髙廣Webサイトをリニューアルしました。</dd>
         </dl>
-        <dl class="news2">
-            <dt><a href="./blog/index.html">2018年6月2日</a></dt>
+        <a href="./news/index.html"></a>
+    </div>
+    <div class="news2">
+        <dl>
+            <dt>2018年6月2日</dt>
             <dd class="label">ブログ</dd>
             <dd class="title">田植えを行いました。</dd>
         </dl>
+        <a href="./blog/index.html"></a>
+    </div>
 
         <ul>
-            <li><a href="#">お知らせ</a></li>
-            <li><a href="#">ブログ</a></li>
+            <li class="oshirase">お知らせ<a href="./news/index.html"></a></li>
+            <li class="burogu">ブログ<a href="./blog/index.html"></a></li>
         </ul>
     </section>
 
@@ -88,6 +97,7 @@
 
         <a href="./special/index.html">
             <section class="special">
+                <div class="menu-bg"></div>
                 <h3>特別栽培米</h3>
             </section>
         </a>
